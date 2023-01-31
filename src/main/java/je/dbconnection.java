@@ -34,7 +34,6 @@ class DATABASE{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         while(true){
-            try{
             dbconnection.getInstance();
             Log.info("1.New Connection\n2.Close Connection\n3.Exit\nEnter choice:");
             int option = input.nextInt();
@@ -48,10 +47,7 @@ class DATABASE{
                 default: Log.info("Enter correct choice:"); 
                         break;
               }
-            }catch(Exception e){
-                String exp = "Exception:"+e;
-                Log.info(exp);
-            }
+         
 
         }
     }
